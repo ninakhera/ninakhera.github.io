@@ -1,13 +1,5 @@
 /*
 * ----------------------------------------------------------------------------------------
-Author       : lapakweb
-Template Name: Gwenyth - personal portfolio Template
-Version      : 1.0                                          
-* ----------------------------------------------------------------------------------------
-*/
-
-/*
-* ----------------------------------------------------------------------------------------
 * 01.GLOBAL CSS STYLE
 * 02.NAVBAR CSS STYLE
 * 03.BANNER CSS STYLE
@@ -458,9 +450,9 @@ img.header-text {
     background-color: #4CAF50;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    -moz-border-radius:30px;
+    /* -moz-border-radius:30px;
     -webkit-border-radius:30px;
-    border-radius: 30px;
+    border-radius: 30px; */
     color: #545454;
     text-transform: uppercase;
 }
