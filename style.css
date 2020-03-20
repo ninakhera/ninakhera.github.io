@@ -36,6 +36,7 @@ NOTE: This is main stylesheet of the template.
  /*================================================
              0 BASE CSS
 ==================================================*/
+iframe { width: 100% }
 body {
      font-family: 'Poppins', sans-serif;
      color: #444;
@@ -395,7 +396,6 @@ a{
  /*================================================
         5 ABOUT AREA
 ==================================================*/
-iframe { width: 100% }
 .about-area .nav-tabs{
     border: none;
     margin-bottom: 50px;
