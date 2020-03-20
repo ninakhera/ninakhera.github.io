@@ -395,6 +395,7 @@ a{
  /*================================================
         5 ABOUT AREA
 ==================================================*/
+iframe { width: 100% }
 .about-area .nav-tabs{
     border: none;
     margin-bottom: 50px;
