@@ -50,6 +50,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: #222;
     line-height: 1.2;
+    text-align:center;
+}
+p{
+  text-align:center;
+}
+li{
+  text-align: center;
+  list-style-position: inside;
 }
  a:focus {
      outline: 0 solid
@@ -59,7 +67,8 @@ h1, h2, h3, h4, h5, h6 {
      height: auto;
  }
 a{
-    transition: 0.4s
+    transition: 0.4s;
+    text-align:center;
 }
  html,
  body {
@@ -266,7 +275,7 @@ a{
      position: relative;
  }
  .main-menu ul.navbar-nav li a {
-     color: #fff;
+     color: black;
      font-weight: 500;
      font-size: 12px;
      padding: 30px 13px;
@@ -1231,3 +1240,21 @@ h3.comment-form-title{
      color: #fff;
      margin: 0px;
  }
+.alignInd{
+  width:60%;
+  margin: auto;
+}
+.alignBul{
+  margin: auto;
+  text-align: left;
+}
+.containerAHaha{
+  width: 100%;
+  text-align: center;
+  display:inline-block;
+}
+.containerACont{
+  width: 100%;
+  text-align: center;
+  display:inline-block;
+}
