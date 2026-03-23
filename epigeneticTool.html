@@ -8,46 +8,15 @@
       <script defer src="https://pyscript.net"></script>
     </head>
     <body style="background-color:powderblue;">
-        #upload epigeneitc data
-        #apply visualization algos to it!!
         <h2>Epibuddy</h2>
         <p>Hey! Epigenetic data is hard to analyze. I get it. I built this tool as a starting point to help you make sense of your data and perform some quick initial analyses.</p>
         <p>Ensure the group variable is named 'group', and the cell type variable is named 'cell_type' and both are stored in the obs section.</p>
-        #What graphing type do you want 
-        #UMAP visualization
-        #t-SNE visualization
-        #Heatmap for marker gene (insert name)
-        #HGene-gene correlaiton plots
-          <py-script>
-                import anndata as ad
-                import scanpy as sc
-                user_data = input()
-                import io
-                from js import document, console
-                from pyodide import create_proxy
-                import asyncio
-                async def upload_file_and_show(event):
-                    file_list = event.target.files
-                    first_item = file_list.item(0) 
-                    if first_item:
-                        file_content = await first_item.text()
-                        output_div = document.getElementById("output")
-                        output_div.innerText = f"File Name: {first_item.name}\n\nContent:\n{file_content[:500]}..." # Display first 500 chars
-                
-                upload_file_proxy = create_proxy(upload_file_and_show)
-                
-                file_input = document.getElementById("file-upload")
-                file_input.addEventListener("change", upload_file_proxy)
-
-                adata = ad.read_h5ad(file_input)
-                adata
-              #what level of processing
-                $Have python insertion
-                Have user input group column name, cell type column
-              Do some basic plotting
-                Recommend plots! Next steps (BIGGEST THINGS)
-                Cell-level UMAP of adata
-          </py-script>
+        
+        <form action="/submit" method="POST">
+            <input type="text" name="name" placeholder="Enter name">
+            <button type="submit">Submit</button>
+        </form>
         <h4>Future goals:</h4>
         <p>Am hoping to expand this to incorporate other types of data, giving a more multiplexed set of recommendations</p>
     </body>
+</html>
