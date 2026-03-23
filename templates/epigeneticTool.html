@@ -12,9 +12,11 @@
         <p>Hey! Epigenetic data is hard to analyze. I get it. I built this tool as a starting point to help you make sense of your data and perform some quick initial analyses.</p>
         <p>Ensure the group variable is named 'group', and the cell type variable is named 'cell_type' and both are stored in the obs section.</p>
         
-        <form action="/submit" method="POST">
-            <input type="text" name="choice" placeholder="Enter choice of plot (t-SNE, PCA, heatmap, correlation)">
-            <input type="h5ad" name="adata" placeholder="Upload adata file">
+        <form action="/submit" method="POST"><form action="/submit" method="POST" enctype="multipart/form-data">
+            <label for="choice">Plot type:</label>
+            <input type="text" name="choice" placeholder="Enter choice (t-SNE, PCA, heatmap, correlation)" required>
+            <label for="adata">Upload .h5ad file:</label>
+            <input type="file" name="adata" accept=".h5ad" required>
             <button type="submit">Submit</button>
         </form>
         <h4>Future goals:</h4>
