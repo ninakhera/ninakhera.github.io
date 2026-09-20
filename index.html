@@ -3,45 +3,234 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <meta name="description" content="Hi, my name is Nina Khera. I love learning and I hope you enjoy browsing through my website :).">
         <meta name="keywords" content="senescent cells, nina khera, 17, longevity, human longevity, genomics, genetics, perseverant">
         <meta name="author" content="Nina">
 
         <title>Nina Khera</title>
-        
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
         <!--== bootstrap ==-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        
         <!--== font-awesome ==-->
         <link href="css/font-awesome.min.css" rel="stylesheet">
-        
         <!--== magnific-popup ==-->
         <link href="css/magnific-popup.css" rel="stylesheet">
-        
         <!--== owl carousel ==-->
         <link href="css/owl.carousel.css" rel="stylesheet">
-        
         <!--== animate css ==-->
         <link href="css/animate.min.css" rel="stylesheet">
-
         <!--== style css ==-->
         <link href="style.css" rel="stylesheet">
-        
         <!--== responsive css ==-->
         <link href="css/responsive.css" rel="stylesheet">
-        
         <!--== theme color css ==-->
         <link href="theme-color/color_1.css" rel="stylesheet">
-        
         <!--== jQuery ==-->
         <script src="js/jquery-2.1.4.min.js"></script>
+
+        <style>
+            :root {
+                --ink:       #1a1a1a;
+                --mist:      #f7f5f2;
+                --sage:      #6b8f71;
+                --sage-pale: #e8efe9;
+                --warm-mid:  #8c7a6b;
+                --rule:      #d8d3cc;
+            }
+
+            * { box-sizing: border-box; }
+
+            body {
+                background: var(--mist);
+                color: var(--ink);
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 1.75;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* ── nav overrides ── */
+            .custom-navbar {
+                background: var(--mist) !important;
+                border-bottom: 1px solid var(--rule);
+                box-shadow: none;
+            }
+
+            /* ── page shell ── */
+            .page-shell {
+                max-width: 660px;
+                margin: 0 auto;
+                padding: 7rem 1.5rem 4rem;
+            }
+
+            /* ── photo ── */
+            .photo-wrap {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 2.5rem;
+                border-radius: 3px;
+                overflow: hidden;
+                cursor: pointer;
+                /* subtle soft shadow at rest */
+                box-shadow: 0 4px 18px rgba(0,0,0,.10);
+                transition: box-shadow .35s ease, transform .35s ease;
+            }
+
+            .photo-wrap img {
+                display: block;
+                width: 100%;
+                max-width: 480px;
+                border-radius: 3px;
+                transition: transform .5s cubic-bezier(.25,.46,.45,.94),
+                            filter .5s ease;
+                filter: saturate(.92) brightness(.98);
+                transform-origin: center center;
+                will-change: transform, filter;
+            }
+
+            /* the vignette overlay */
+            .photo-wrap::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 3px;
+                background: radial-gradient(ellipse at center,
+                    transparent 55%,
+                    rgba(0,0,0,.18) 100%);
+                transition: opacity .45s ease;
+                pointer-events: none;
+            }
+
+            /* touch / hover: gentle zoom + sharpen + lift */
+            .photo-wrap:hover img,
+            .photo-wrap:focus-within img,
+            .photo-wrap.touched img {
+                transform: scale(1.045);
+                filter: saturate(1.08) brightness(1.03);
+            }
+
+            .photo-wrap:hover,
+            .photo-wrap.touched {
+                box-shadow: 0 10px 36px rgba(0,0,0,.18);
+                transform: translateY(-2px);
+            }
+
+            .photo-wrap:hover::after,
+            .photo-wrap.touched::after {
+                opacity: 0;
+            }
+
+            /* little ✦ sparkle badge on tap */
+            .photo-badge {
+                position: absolute;
+                bottom: 12px;
+                right: 14px;
+                background: white;
+                color: var(--sage);
+                font-family: 'DM Sans', sans-serif;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: .04em;
+                padding: 4px 10px;
+                border-radius: 20px;
+                opacity: 0;
+                transform: translateY(6px);
+                transition: opacity .3s ease .1s, transform .3s ease .1s;
+                pointer-events: none;
+                white-space: nowrap;
+                box-shadow: 0 2px 8px rgba(0,0,0,.12);
+            }
+
+            .photo-wrap:hover .photo-badge,
+            .photo-wrap.touched .photo-badge {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* ── headings ── */
+            .page-shell h2 {
+                font-family: 'EB Garamond', serif;
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 1.2;
+                margin: 0 0 1.25rem;
+                color: var(--ink);
+            }
+
+            /* ── body text ── */
+            .page-shell p {
+                margin: 0 0 1.25rem;
+                color: #333;
+                max-width: 58ch;
+            }
+
+            /* ── divider ── */
+            .page-divider {
+                border: none;
+                border-top: 1px solid var(--rule);
+                margin: 2rem 0;
+            }
+
+            /* ── link buttons ── */
+            .link-row {
+                display: flex;
+                flex-direction: column;
+                gap: .75rem;
+                margin-top: 2rem;
+            }
+
+            .link-row a {
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+                font-family: 'DM Sans', sans-serif;
+                font-size: .9rem;
+                font-weight: 400;
+                color: var(--sage);
+                text-decoration: none;
+                padding: .6rem 1.2rem;
+                border: 1px solid var(--sage);
+                border-radius: 2px;
+                width: fit-content;
+                transition: background .22s ease, color .22s ease;
+            }
+
+            .link-row a:hover {
+                background: var(--sage);
+                color: #fff;
+            }
+
+            /* ── footer ── */
+            .footer {
+                border-top: 1px solid var(--rule) !important;
+                background: var(--mist) !important;
+                padding: 2rem 0 !important;
+            }
+
+            .footer p {
+                color: var(--warm-mid);
+                font-size: .85rem;
+            }
+
+            /* ── reduced motion ── */
+            @media (prefers-reduced-motion: reduce) {
+                .photo-wrap img,
+                .photo-wrap,
+                .photo-badge { transition: none !important; }
+            }
+        </style>
     </head>
     <body>
-        
+
         <!--======= PRELOADER =======-->
         <div id="loader-wrapper">
             <div id="loader"></div>
@@ -63,14 +252,13 @@
                                     <span class="icon-bar"></span>
                                 </button>
                             </div>
-                            <a style="color:black" href="index.html">Nina Khera.</a> <!--== logo ==-->
+                            <a style="color:black" href="index.html">Nina Khera.</a>
                         </div>
                     </div>
-                  
                     <div class="col-md-9 col-sm-8 col-xs-12">
                        <nav class="main-menu">
                         <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav"> <!--== manin menu ==-->
+                            <ul class="nav navbar-nav">
                                 <li class="active"><a class="smoth-scroll" href="index.html">Home</a></li>
                                 <li><a class="smoth-scroll" href="about.html">About me</a></li>
                                 <li><a class="smoth-scroll" href="projects.html">Projects</a></li>
@@ -80,51 +268,42 @@
                         </div>
                         </nav>
                     </div>
-                </div> <!--/.row-->
-            </div> <!--/.container-->
+                </div>
+            </div>
         </header>
         <!--===== END HEADER AREA ======-->
-        <br>
-      <br>
-      <br>
-      <br>
-<!--         <h4 style="text-align:center;">Hey! My name is Nina Khera and I'm working to combat human aging with computer science.</h4> -->
-      <div class="alignInd">
-        <img src="IMG_6284 (1).jpg" alt="My Family">
-        <h2>A bit about me</h2>
-        <p>Hello! Nice to meet you. I'm an undergrad interested in brain aging with a bend towards Alzheimer's. I'm currently working with the Tsai Lab on researching the gene expression behind cognitive resilience to AD, building out a product aimed at assessing risk of neurodegeneration, and travelling down many rabbit holes.</p>
-          <br>  
-        <p>I'm also a staunch academic (or I'd like to think of myself as one), and in the past have published papers on various topics linked to aging (doi: 10.18632/aging.203442, 10.3390/biology11121768, 10.3389/fnmol.2025.1665802, 10.48550/arXiv.2603.25713). To find out more about my past work/CV, head to my projects page.</p>
-          <br>  
-         <p> Moreover (and perhaps, in some ways, most importantly), I love to run and write poetry. I publish online a bit, and have worked with Hanging Loose Press (some of my work is in their issue #115), and my high school's publication the Spectator.</p>
-        <p>
-          Go to my about page to learn more about me, my projects page to see my projects, and my content page to... you guessed it! See my content. 
-        </p>
-        <br>
-        <div class="containerACont">
-          <a href="about.html" target="_blank">Find out a bit more about me</a>
+
+        <div class="page-shell">
+
+            <!-- Photo with focus effect -->
+            <div class="photo-wrap" tabindex="0" role="img" aria-label="Nina Khera with her family">
+                <img src="IMG_6284 (1).jpg" alt="My Family">
+                <span class="photo-badge">✦ my family</span>
+            </div>
+
+            <h2>A bit about me</h2>
+
+            <p>Hello! Nice to meet you. I'm an undergrad interested in brain aging with a bend towards Alzheimer's. I'm currently working with the Tsai Lab on researching the gene expression behind cognitive resilience to AD, building out a product aimed at assessing risk of neurodegeneration, and travelling down many rabbit holes.</p>
+
+            <p>I'm also a staunch academic (or I'd like to think of myself as one), and in the past have published papers on various topics linked to aging (doi: 10.18632/aging.203442, 10.3390/biology11121768, 10.3389/fnmol.2025.1665802, 10.48550/arXiv.2603.25713). To find out more about my past work/CV, head to my projects page.</p>
+
+            <p>Moreover (and perhaps, in some ways, most importantly), I love to run and write poetry. I publish online a bit, and have worked with Hanging Loose Press (some of my work is in their issue #115), and my high school's publication the Spectator.</p>
+
+            <hr class="page-divider">
+
+            <div class="link-row">
+                <a href="about.html" target="_blank">Find out a bit more about me</a>
+                <a href="projects.html" target="_blank">See my current projects</a>
+                <a href="content.html" target="_blank">Read my articles &amp; watch my videos</a>
+            </div>
+
         </div>
-        <br>
-        <br>
-        <div class="containerACont">
-          <a href="projects.html" target="_blank">Find out more about my current projects!</a>
-        </div>
-        <br>
-        <br>
-        <div class="containerACont">
-          <a href="content.html" target="_blank">Look at my articles & videos!</a>
-        </div>
-        <br>
-        <br>
-      </div>  
-<!--    https://www.notion.so/Nina-Khera-dc846a299bb5452daa7de23558cd12a8    -->
-<!--      proper indent  -->
-        
+
         <!--====== FOOTER AREA ======-->
         <footer class="footer" id="contact">
             <div class="container">
               <p>Email: kheranina@gmail.com</p>
-                <div class="row wow zoomIn" data-wow-delay="0.4s">
+                <div class="row">
                     <div class="col-md-12 text-center">
                         <p>&copy;2022 <strong>Nina Khera</strong>. All Rights Reserved</p>
                     </div>
@@ -133,36 +312,30 @@
         </footer>
         <!--====== END FOOTER AREA ======-->
 
-
         <!--== plugins js ==-->
         <script src="js/plugins.js"></script>
-        
-        <!--== typed js ==-->
         <script src="js/typed.js"></script>
-        
-        <!--== stellar js ==-->
         <script src="js/jquery.stellar.min.js"></script>
-        
-        <!--== counterup js ==-->
         <script src="js/jquery.counterup.min.js"></script>
-        
-        <!--== waypoints js ==-->
         <script src="js/jquery.waypoints.min.js"></script>
-        
-         <!--== wow js ==-->
         <script src="js/wow.min.js"></script>
-        
-         <!--== validator js ==-->
         <script src="js/validator.min.js"></script>
-        
-         <!--== mixitup js ==-->
         <script src="js/jquery.mixitup.js"></script>
-        
-         <!--== contact js ==-->
         <script src="js/contact.js"></script>
-        
-         <!--== main js ==-->
         <script src="js/main.js"></script>
+
+        <script>
+            // Touch support for the photo focus effect
+            const photoWrap = document.querySelector('.photo-wrap');
+            if (photoWrap) {
+                photoWrap.addEventListener('touchstart', () => {
+                    photoWrap.classList.add('touched');
+                }, { passive: true });
+
+                photoWrap.addEventListener('touchend', () => {
+                    setTimeout(() => photoWrap.classList.remove('touched'), 800);
+                });
+            }
+        </script>
     </body>
 </html>
-
