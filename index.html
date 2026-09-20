@@ -75,8 +75,8 @@
             /* ── photo ── */
             .photo-wrap {
                 position: relative;
-                display: inline-block;
-                margin-bottom: 2.5rem;
+                display: block;
+                margin: 0 auto 2.5rem;
                 border-radius: 3px;
                 overflow: hidden;
                 cursor: pointer;
@@ -84,11 +84,10 @@
                 box-shadow: 0 4px 18px rgba(0,0,0,.10);
                 transition: box-shadow .35s ease, transform .35s ease;
             }
-
             .photo-wrap img {
                 display: block;
                 width: 100%;
-                max-width: 480px;
+                max-width: 640px;
                 border-radius: 3px;
                 transition: transform .5s cubic-bezier(.25,.46,.45,.94),
                             filter .5s ease;
@@ -278,7 +277,7 @@
             <!-- Photo with focus effect -->
             <div class="photo-wrap" tabindex="0" role="img" aria-label="Nina Khera with her family">
                 <img src="IMG_6284 (1).jpg" alt="My Family">
-                <span class="photo-badge">✦ my family</span>
+                <span class="photo-badge">My family and I/span>
             </div>
 
             <h2>A bit about me</h2>
