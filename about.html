@@ -3,53 +3,167 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Hi, my name is Nina Khera. I love learning and I hope you enjoy browsing through my website :).">
-        <meta name="keywords" content="senescent cells, nina khera, 19, longevity, human longevity, genomics, genetics, perseverant">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="About Nina Khera — undergrad working on neurodegeneration and Alzheimer's.">
         <meta name="author" content="Nina">
 
-        <title>Nina Khera</title>
-        
-        <!-- Favicon -->
+        <title>About — Nina Khera</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
         <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-
-        <!--== bootstrap ==-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        
-        <!--== font-awesome ==-->
         <link href="css/font-awesome.min.css" rel="stylesheet">
-        
-        <!--== magnific-popup ==-->
-        <link href="css/magnific-popup.css" rel="stylesheet">
-        
-        <!--== owl carousel ==-->
-        <link href="css/owl.carousel.css" rel="stylesheet">
-        
-        <!--== animate css ==-->
         <link href="css/animate.min.css" rel="stylesheet">
-
-        <!--== style css ==-->
         <link href="style.css" rel="stylesheet">
-        
-        <!--== responsive css ==-->
         <link href="css/responsive.css" rel="stylesheet">
-        
-        <!--== theme color css ==-->
         <link href="theme-color/color_1.css" rel="stylesheet">
-        
-        <!--== jQuery ==-->
         <script src="js/jquery-2.1.4.min.js"></script>
+
+        <style>
+            :root {
+                --ink:       #1a1a1a;
+                --mist:      #f7f5f2;
+                --sage:      #6b8f71;
+                --sage-pale: #e8efe9;
+                --warm-mid:  #8c7a6b;
+                --rule:      #d8d3cc;
+            }
+
+            * { box-sizing: border-box; }
+
+            body {
+                background: var(--mist);
+                color: var(--ink);
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 1.75;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .custom-navbar {
+                background: var(--mist) !important;
+                border-bottom: 1px solid var(--rule);
+                box-shadow: none;
+            }
+
+            /* ── page shell ── */
+            .page-shell {
+                max-width: 660px;
+                margin: 0 auto;
+                padding: 7rem 1.5rem 5rem;
+            }
+
+            /* ── headings ── */
+            .page-shell h2 {
+                font-family: 'EB Garamond', serif;
+                font-size: 2rem;
+                font-weight: 400;
+                margin: 0 0 1.25rem;
+            }
+
+            .page-shell p {
+                color: #333;
+                max-width: 58ch;
+                margin: 0 0 1.25rem;
+            }
+
+            hr.divider {
+                border: none;
+                border-top: 1px solid var(--rule);
+                margin: 2.5rem 0;
+            }
+
+            /* ── pull quote ── */
+            .pull-quote {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.3rem;
+                font-style: italic;
+                color: var(--warm-mid);
+                border-left: 2px solid var(--sage);
+                padding: .5rem 0 .5rem 1.25rem;
+                margin: 2rem 0;
+                max-width: 52ch;
+            }
+
+            /* ── contact cards ── */
+            .contact-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .75rem;
+                margin-top: 1.25rem;
+            }
+
+            .contact-card {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                background: #fff;
+                border: 1px solid var(--rule);
+                border-radius: 6px;
+                padding: .75rem 1.25rem;
+                text-decoration: none;
+                color: var(--ink);
+                font-size: .9rem;
+                font-weight: 400;
+                transition: box-shadow .2s ease, transform .2s ease;
+            }
+
+            .contact-card:hover {
+                box-shadow: 0 4px 16px rgba(0,0,0,.09);
+                transform: translateY(-2px);
+                color: var(--sage);
+                text-decoration: none;
+            }
+
+            .contact-card .icon {
+                font-size: 1rem;
+                color: var(--sage);
+            }
+
+            /* ── resume link ── */
+            .resume-link {
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+                font-size: .9rem;
+                font-weight: 400;
+                color: var(--sage);
+                text-decoration: none;
+                padding: .65rem 1.3rem;
+                border: 1px solid var(--sage);
+                border-radius: 2px;
+                transition: background .22s ease, color .22s ease;
+                margin-bottom: 2.5rem;
+            }
+
+            .resume-link:hover {
+                background: var(--sage);
+                color: #fff;
+                text-decoration: none;
+            }
+
+            /* ── footer ── */
+            .footer {
+                border-top: 1px solid var(--rule) !important;
+                background: var(--mist) !important;
+                padding: 2rem 0 !important;
+            }
+
+            .footer p { color: var(--warm-mid); font-size: .85rem; }
+        </style>
     </head>
     <body>
-        
-        <!--======= PRELOADER =======-->
+
         <div id="loader-wrapper">
             <div id="loader"></div>
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
         </div>
 
-        <!--===== HEADER AREA =====-->
         <header class="navbar custom-navbar navbar-fixed-top">
             <div class="container">
                 <div class="row">
@@ -63,97 +177,81 @@
                                     <span class="icon-bar"></span>
                                 </button>
                             </div>
-                            <a style="color:black" href="index.html">Nina Khera.</a> <!--== logo ==-->
+                            <a style="color:black" href="index.html">Nina Khera.</a>
                         </div>
                     </div>
-                  
                     <div class="col-md-9 col-sm-8 col-xs-12">
                        <nav class="main-menu">
                         <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav"> <!--== manin menu ==-->
-                                <li class="active"><a class="smoth-scroll" href="index.html">Home</a></li>
-                                <li><a class="smoth-scroll" href="about.html">About me</a></li>
+                            <ul class="nav navbar-nav">
+                                <li><a class="smoth-scroll" href="index.html">Home</a></li>
+                                <li class="active"><a class="smoth-scroll" href="about.html">About me</a></li>
                                 <li><a class="smoth-scroll" href="projects.html">Projects</a></li>
-                                <li><a class="smoth-scroll" href="content.html">Content</a></li>
                                 <li><a class="smoth-scroll" href="about.html#contact">Get in touch!</a></li>
                             </ul>
                         </div>
                         </nav>
                     </div>
-                </div> <!--/.row-->
-            </div> <!--/.container-->
+                </div>
+            </div>
         </header>
-        <!--===== END HEADER AREA ======-->
-        <br>
-      <br>
-      <br>
-      <br>
-<!--         <h4 style="text-align:center;">Hey! My name's Nina and I'm working to combat neurodegeneration with computer science.</h4> -->
-      <div class="alignInd">
-        <h2>Who am I?</h2>
-        <p>Hey! Thanks for visiting my website. My name is Nina and I'm an undergrad in college. The above question is one I ask myself every day, to be very honest. And I'm still not sure that I have an answer.</p>
-        <p>One thing about me that's core to my answer is that I am very passionate about improving the human condition, and one of the ways in which I want to accomplish this is by fighting against neurodegenerative conditions. These diseases are uniquely devastating in that they take the souls and lives of those we love far before they are actually gone, and I want to spend my life working on them.</p>
-        <p>I'm doing this through my work decoding cognitive resilience to Alzheimer's Disease at the MIT Tsai lab, co-directing Harvard's Alzheimer's Buddies volunteer program, meta-thinking about science at EngineeringX, and some more.</p>
-        <br>
-          
-        <div class="containerAHaha">
-            <a href="Resume0719PDF.pdf" target="_blank">My Resume :)</a>
-         <br>
+
+        <div class="page-shell">
+
+            <h2>Who am I?</h2>
+
+            <p>Hey! Thanks for visiting. My name is Nina and I'm an undergrad in college. The above question is one I ask myself every day, to be very honest — and I'm still not sure I have a full answer.</p>
+
+            <blockquote class="pull-quote">
+                These diseases take the souls of those we love far before they are actually gone.
+            </blockquote>
+
+            <p>One thing that's core to who I am is a deep passion for improving the human condition — and one of the ways I want to do that is by fighting neurodegeneration. These conditions are uniquely devastating, and I want to spend my life working on them.</p>
+
+            <p>Right now I'm doing that through decoding cognitive resilience to Alzheimer's at the MIT Tsai Lab, co-directing Harvard's Alzheimer's Buddies volunteer program, and meta-thinking about science at EngineeringX — among other things.</p>
+
+            <hr class="divider">
+
+            <a class="resume-link" href="Resume0719PDF.pdf" target="_blank">
+                View my résumé ↗
+            </a>
+
+            <hr class="divider">
+
+            <h2 id="contact">Get in touch</h2>
+            <p>I'd love to hear from you — whether it's about research, collaborations, or just to say hi.</p>
+
+            <div class="contact-row">
+                <a class="contact-card" href="mailto:kheranina@gmail.com">
+                    <span class="icon">✉</span> kheranina@gmail.com
+                </a>
+                <a class="contact-card" href="https://ninakhera.substack.com/" target="_blank">
+                    <span class="icon">✦</span> Newsletter
+                </a>
+            </div>
+
         </div>
-        <h2 id="contact">Contact me</h2>
-        <div class="containerAHaha">
-          <a href="mailto:kheranina@gmail.com">Email</a>
-         <br>
-        <a href="https://ninakhera.substack.com/" target="_blank">Newsletter</a>
-        </div>
-        <br>
-        <br>
-      </div>  
-<!--    https://www.notion.so/Nina-Khera-dc846a299bb5452daa7de23558cd12a8    -->
-<!--      proper indent  -->
-        
-        <!--====== FOOTER AREA ======-->
+
         <footer class="footer">
             <div class="container">
-              <p>Email: kheranina@gmail.com</p>
-                <div class="row wow zoomIn" data-wow-delay="0.4s">
+                <p>Email: kheranina@gmail.com</p>
+                <div class="row">
                     <div class="col-md-12 text-center">
                         <p>&copy;2022 <strong>Nina Khera</strong>. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
         </footer>
-        <!--====== END FOOTER AREA ======-->
 
-
-        <!--== plugins js ==-->
         <script src="js/plugins.js"></script>
-        
-        <!--== typed js ==-->
         <script src="js/typed.js"></script>
-        
-        <!--== stellar js ==-->
         <script src="js/jquery.stellar.min.js"></script>
-        
-        <!--== counterup js ==-->
         <script src="js/jquery.counterup.min.js"></script>
-        
-        <!--== waypoints js ==-->
         <script src="js/jquery.waypoints.min.js"></script>
-        
-         <!--== wow js ==-->
         <script src="js/wow.min.js"></script>
-        
-         <!--== validator js ==-->
         <script src="js/validator.min.js"></script>
-        
-         <!--== mixitup js ==-->
         <script src="js/jquery.mixitup.js"></script>
-        
-         <!--== contact js ==-->
         <script src="js/contact.js"></script>
-        
-         <!--== main js ==-->
         <script src="js/main.js"></script>
     </body>
 </html>
