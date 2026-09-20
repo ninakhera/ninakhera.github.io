@@ -3,53 +3,228 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Hi, my name is Nina Khera. I love learning and I hope you enjoy browsing through my website :).">
-        <meta name="keywords" content="senescent cells, nina khera, 15, longevity, human longevity, genomics, genetics, perseverant">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="Nina Khera's projects in brain aging, Alzheimer's research, and more.">
         <meta name="author" content="Nina">
 
-        <title>Nina Khera</title>
-        
-        <!-- Favicon -->
+        <title>Projects — Nina Khera</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
         <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-
-        <!--== bootstrap ==-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        
-        <!--== font-awesome ==-->
         <link href="css/font-awesome.min.css" rel="stylesheet">
-        
-        <!--== magnific-popup ==-->
-        <link href="css/magnific-popup.css" rel="stylesheet">
-        
-        <!--== owl carousel ==-->
-        <link href="css/owl.carousel.css" rel="stylesheet">
-        
-        <!--== animate css ==-->
         <link href="css/animate.min.css" rel="stylesheet">
-
-        <!--== style css ==-->
         <link href="style.css" rel="stylesheet">
-        
-        <!--== responsive css ==-->
         <link href="css/responsive.css" rel="stylesheet">
-        
-        <!--== theme color css ==-->
         <link href="theme-color/color_1.css" rel="stylesheet">
-        
-        <!--== jQuery ==-->
         <script src="js/jquery-2.1.4.min.js"></script>
+
+        <style>
+            :root {
+                --ink:       #1a1a1a;
+                --mist:      #f7f5f2;
+                --sage:      #6b8f71;
+                --sage-pale: #e8efe9;
+                --warm-mid:  #8c7a6b;
+                --rule:      #d8d3cc;
+            }
+
+            * { box-sizing: border-box; }
+
+            body {
+                background: var(--mist);
+                color: var(--ink);
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 1.75;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .custom-navbar {
+                background: var(--mist) !important;
+                border-bottom: 1px solid var(--rule);
+                box-shadow: none;
+            }
+
+            /* ── page shell ── */
+            .page-shell {
+                max-width: 740px;
+                margin: 0 auto;
+                padding: 7rem 1.5rem 5rem;
+            }
+
+            .page-title {
+                font-family: 'EB Garamond', serif;
+                font-size: 2.4rem;
+                font-weight: 400;
+                margin: 0 0 .4rem;
+            }
+
+            .page-subtitle {
+                color: var(--warm-mid);
+                font-size: .95rem;
+                margin: 0 0 3rem;
+            }
+
+            /* ── section headings ── */
+            .section-label {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin: 3rem 0 1.25rem;
+                padding-bottom: .5rem;
+                border-bottom: 1px solid var(--rule);
+            }
+
+            .subsection-label {
+                font-size: .8rem;
+                font-weight: 500;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                color: var(--warm-mid);
+                margin: 2.5rem 0 1rem;
+            }
+
+            /* ── card grid ── */
+            .card-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            @media (max-width: 560px) {
+                .card-grid { grid-template-columns: 1fr; }
+            }
+
+            .card-grid.single { grid-template-columns: 1fr; }
+            .card-grid.triple { grid-template-columns: 1fr 1fr 1fr; }
+
+            @media (max-width: 640px) {
+                .card-grid.triple { grid-template-columns: 1fr; }
+            }
+
+            /* ── project bubble / card ── */
+            .proj-card {
+                background: #fff;
+                border: 1px solid var(--rule);
+                border-radius: 6px;
+                padding: 1.25rem 1.4rem;
+                transition: box-shadow .22s ease, transform .22s ease;
+            }
+
+            .proj-card:hover {
+                box-shadow: 0 6px 24px rgba(0,0,0,.09);
+                transform: translateY(-2px);
+            }
+
+            .proj-card .card-tag {
+                font-size: .72rem;
+                font-weight: 500;
+                letter-spacing: .07em;
+                text-transform: uppercase;
+                color: var(--sage);
+                margin-bottom: .4rem;
+            }
+
+            .proj-card h4 {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.15rem;
+                font-weight: 500;
+                margin: 0 0 .5rem;
+                line-height: 1.3;
+            }
+
+            .proj-card p {
+                font-size: .88rem;
+                color: #444;
+                margin: 0;
+                line-height: 1.6;
+            }
+
+            .proj-card a {
+                color: var(--sage);
+                text-decoration: none;
+            }
+
+            .proj-card a:hover { text-decoration: underline; }
+
+            /* ── publication list ── */
+            .pub-list {
+                display: flex;
+                flex-direction: column;
+                gap: .75rem;
+            }
+
+            .pub-item {
+                background: #fff;
+                border: 1px solid var(--rule);
+                border-left: 3px solid var(--sage);
+                border-radius: 0 6px 6px 0;
+                padding: 1rem 1.25rem;
+                font-size: .88rem;
+                color: #333;
+                line-height: 1.65;
+                transition: box-shadow .2s ease;
+            }
+
+            .pub-item:hover {
+                box-shadow: 0 4px 16px rgba(0,0,0,.07);
+            }
+
+            .pub-item .pub-year {
+                font-size: .72rem;
+                font-weight: 500;
+                color: var(--sage);
+                letter-spacing: .06em;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: .25rem;
+            }
+
+            .pub-item a {
+                color: var(--sage);
+                text-decoration: none;
+            }
+
+            .pub-item a:hover { text-decoration: underline; }
+
+            /* ── footer ── */
+            .footer {
+                border-top: 1px solid var(--rule) !important;
+                background: var(--mist) !important;
+                padding: 2rem 0 !important;
+            }
+
+            .footer p { color: var(--warm-mid); font-size: .85rem; }
+
+            hr.divider {
+                border: none;
+                border-top: 1px solid var(--rule);
+                margin: 2.5rem 0;
+            }
+
+            /* ── PDF embed ── */
+            .pdf-wrap {
+                margin-top: 1rem;
+                border: 1px solid var(--rule);
+                border-radius: 6px;
+                overflow: hidden;
+            }
+        </style>
     </head>
     <body>
-        
-        <!--======= PRELOADER =======-->
+
         <div id="loader-wrapper">
             <div id="loader"></div>
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
         </div>
 
-        <!--===== HEADER AREA =====-->
         <header class="navbar custom-navbar navbar-fixed-top">
             <div class="container">
                 <div class="row">
@@ -63,129 +238,226 @@
                                     <span class="icon-bar"></span>
                                 </button>
                             </div>
-                            <a style="color:black" href="index.html">Nina Khera.</a> <!--== logo ==-->
+                            <a style="color:black" href="index.html">Nina Khera.</a>
                         </div>
                     </div>
-                  
                     <div class="col-md-9 col-sm-8 col-xs-12">
                        <nav class="main-menu">
                         <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav"> <!--== manin menu ==-->
-                                <li class="active"><a class="smoth-scroll" href="index.html">Home</a></li>
+                            <ul class="nav navbar-nav">
+                                <li><a class="smoth-scroll" href="index.html">Home</a></li>
                                 <li><a class="smoth-scroll" href="about.html">About me</a></li>
-                                <li><a class="smoth-scroll" href="projects.html">Projects</a></li>
+                                <li class="active"><a class="smoth-scroll" href="projects.html">Projects</a></li>
                                 <li><a class="smoth-scroll" href="content.html">Content</a></li>
                                 <li><a class="smoth-scroll" href="about.html#contact">Get in touch!</a></li>
                             </ul>
                         </div>
                         </nav>
                     </div>
-                </div> <!--/.row-->
-            </div> <!--/.container-->
+                </div>
+            </div>
         </header>
-        <!--===== END HEADER AREA ======-->
-        <br>
-      <br>
-      <br>
-      <br>
-<!--         <h4 style="text-align:center;">Hey! My name is Nina Khera and I'm working to combat human aging with computer science.</h4> -->
-      <div class="alignInd">
-        <p>Here are some of my projects!</p>
-        <h2>Science/Tech</h2>
-<!--         <br> -->
-        <h3>Research</h3>
-        <p>I have worked with the Gladyshev, Boyden, and Tsai labs (last two are ones I am working with currently) on various projects within the bio space.</p>
-        <p>In my collaboration with these labs, I've published some work:</p>
-          <p>Kording, K. P., Arkhipov, A., Deng, D., Escola, S., Grant, S. G. N., Haspel, G., Januszewski, M., Kasthuri, N., Khera, N., Kohman, R. E., Lindsay, G., Lunshof, J., Marblestone, A., … Boyden, E. S. (2026). Compiling molecular ultrastructure into neural dynamics. arXiv. https://doi.org/10.48550/ARXIV.2603.25713</p>
-          <p>Fedorovskyy, M., Dasariraju, S., Simonini, S., Mehra, E., Law, C., Khera, N., Rajagopal, K., & Orkaby, A. (2025). Aging initiative : A student-led model for advancing aging research with a translational focus. Innovation in Aging, 9, igaf122.3536. https://doi.org/10.1093/geroni/igaf122.3536</p>
-        <p>EngineeringX Substack with my collaborators Dr. Ed Boyden and Claire Wang (https://engineeringx.substack.com/</p>
-        <p>Khera, N., Raju, R., & Lipton, S. A. (2025). The transcriptional and cellular landscape of cognitive resilience to Alzheimer’s disease. In Frontiers in Molecular Neuroscience (Vol. 18, p. 1665802). Elsevier. https://doi.org/10.3389/fnmol.2025.1665802</p>
-        <p>Fossel, M., et al (2024). Aging: How aging works, how we reverse aging, and prospects for curing aging. Academic Press, an imprint of Elsevier. (co-authored chapter)</p>
-        <p>Fossel, M., Bean, J., Khera, N., & Kolonin, M. G. (2022). A Unified Model of Age-Related Cardiovascular Disease. In Biology (Vol. 11, Issue 12, p. 1768). MDPI AG. https://doi.org/10.3390/biology11121768 (19 citations)</p>
-        <p>Khera, N., Santesmasses, D., Kerepesi, C., & Gladyshev, V. N. (2021). COVID-19 mortality rate in children is U-shaped. In Aging (Vol. 13, Issue 16, pp. 19954–19962). Impact Journals, LLC. https://doi.org/10.18632/aging.203442  (25 citations; also cited by the World Health Organization and the Public Health Agency of Sweden in policy reports)</p>
-        <br>
-        <h3>Biotech Work</h3>
-        <p>I'm currently working with <a href="https://www.cognitotx.com/" target="_blank">Cognito Therapeutics</a> on 40Hz stimulation to address Alzheimer's.</p>
-        <p>In the past, I have interned at <a href="https://www.lygenesis.com/" target="_blank">Lygenesis</a>, <a href="https://www.rubedolife.com/" target="_blank">Rubedo Life Sciences</a> and <a href="https://alio.ai/" target="_blank">Alio</a>, where I performed biological data analyses, developed websites and created various written deliverables.</p>
-                <br>
-          <h3>Other Orgs</h3>
-        <p>I am a Venture Partner for Contrary! As part of this role, I scout and interview founders, organize events for builders, and a lot more.</p>
-        <p>On my campus, I'm part of the Aging Initiative, which is an org focused on catalyzing collaboration and new ideas in aging research & biotech. As part of my work with them, I'm organizing the NOVA conference, where findings and ideas about brain aging will be showcased by the leaders in the field.</p>
-        <br>
-        <h3>Biotein</h3>
-        <p>I co-founded <a href="https://bioteinresearch.ca/" target="_blank">Biotein</a> in April of 2019. We are a startup focused on human aging.</p>
-        <p>Sub-projects:</p>
-          <ul>
-            <li><b>A biological age test</b> - We are working on measuring biological age with a protein-focused test. Different proteins change in concentration as humans age, and we want to determine which ones change most, and use that information to give our customers a full picture of their health. We hope to release this soon (early 2023).</li>
-            <li><b>Reducing the impacts of brain aging</b> - Biotein is currently designing research proposals with the ultimate goal of curing age-related neurodegeneration.</li>
-          </ul>
-        <h3>Volunteering</h3>
-        <p>I'm currently a co-director of the Harvard chapter of Alzheimer's Buddies, an org that aims to support those who are currently afflicted through one-on-one buddy pairing and connection.</p>
-        <p>I was also a volunteer author for both Youth STEM Matters and Lifespan.io. I wrote articles on the latest science and tech (both broad and aging-focused). I also have taught martial arts classes to those with special needs at Easterseals.</p>
-        <br>
-        <h3>Conferences</h3>
-        <p>I love to get the word out about work in dementia and aging, and have interviewed Dr. Nir Barzilai at the World Longevity Forum in Madrid 2026, organized the Neuroscience of Vitality and Aging Conference 2026, and spoken at the Fifteen Seconds, RAADFest, and Collision conferences a few years ago. I will also be speaking at the upcoming Animal Longevity Summit in October 2026.</p>
-        <br>
-        <h2>Other</h2>
-        <h3>Running</h3>
-        <p>I love to run - in the past I've done a half marathon, and am currently working toward another.</p>
-                <br>
-        <h3>Project Euler</h3>
-        <p>I love to "recreationally" code, and am in the top one percent of programmers solving problems on the Project Euler platform. These mathematical challenges are digestible, taking on average a few hours to crack, yet far-reaching, involving research, hacks and much trial and error. I have solved over 120 to date.</p>
-      </div>  
-        <object data="Resume0719PDF.pdf" type="application/pdf" width="100%" height="600px">
-    <iframe src="Resume0719PDF.pdf" width="100%" height="600px" style="border: none;">
-        <p>Your browser does not support embedding PDFs. 
-           <a href="Resume0719PDF.pdf" target="_blank">Click here to download my Resume</a>
-        </p>
-    </iframe>
-</object>
 
-<!--    https://www.notion.so/Nina-Khera-dc846a299bb5452daa7de23558cd12a8    -->
-<!--      proper indent  -->
-        
-        <!--====== FOOTER AREA ======-->
+        <div class="page-shell">
+
+            <h1 class="page-title">Projects</h1>
+            <p class="page-subtitle">Research, biotech, community, and the occasional rabbit hole.</p>
+
+            <!-- ═══════════════ SCIENCE & TECH ═══════════════ -->
+            <h2 class="section-label">Science &amp; Tech</h2>
+
+            <!-- Research labs -->
+            <p class="subsection-label">Lab work</p>
+            <div class="card-grid">
+                <div class="proj-card">
+                    <div class="card-tag">Current</div>
+                    <h4>Tsai Lab — MIT</h4>
+                    <p>Researching gene expression behind cognitive resilience to Alzheimer's disease, and building a product to assess neurodegeneration risk.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Current</div>
+                    <h4>Boyden Lab — MIT</h4>
+                    <p>Collaborating on compiling molecular ultrastructure into neural dynamics, with a published preprint on arXiv (2026).</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Past</div>
+                    <h4>Gladyshev Lab — Harvard</h4>
+                    <p>Studied COVID-19 mortality rates in children, cited by the WHO and the Public Health Agency of Sweden in policy reports.</p>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <p class="subsection-label">Publications</p>
+            <div class="pub-list">
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    Kording, K. P., Arkhipov, A., … <strong>Khera, N.</strong>, … Boyden, E. S. Compiling molecular ultrastructure into neural dynamics. <em>arXiv.</em> <a href="https://doi.org/10.48550/ARXIV.2603.25713" target="_blank">doi:10.48550/arXiv.2603.25713</a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    Fedorovskyy, M., Dasariraju, S., … <strong>Khera, N.</strong>, … Orkaby, A. Aging initiative: A student-led model for advancing aging research with a translational focus. <em>Innovation in Aging, 9,</em> igaf122.3536. <a href="https://doi.org/10.1093/geroni/igaf122.3536" target="_blank">doi:10.1093/geroni/igaf122.3536</a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <strong>Khera, N.</strong>, Raju, R., &amp; Lipton, S. A. The transcriptional and cellular landscape of cognitive resilience to Alzheimer's disease. <em>Frontiers in Molecular Neuroscience, 18,</em> 1665802. <a href="https://doi.org/10.3389/fnmol.2025.1665802" target="_blank">doi:10.3389/fnmol.2025.1665802</a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2024</span>
+                    Fossel, M., et al. <em>Aging: How aging works, how we reverse aging, and prospects for curing aging.</em> Academic Press / Elsevier. (co-authored chapter)
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2022</span>
+                    Fossel, M., Bean, J., <strong>Khera, N.</strong>, &amp; Kolonin, M. G. A Unified Model of Age-Related Cardiovascular Disease. <em>Biology, 11</em>(12), 1768. <a href="https://doi.org/10.3390/biology11121768" target="_blank">doi:10.3390/biology11121768</a> — 19 citations
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2021</span>
+                    <strong>Khera, N.</strong>, Santesmasses, D., Kerepesi, C., &amp; Gladyshev, V. N. COVID-19 mortality rate in children is U-shaped. <em>Aging, 13</em>(16), 19954–19962. <a href="https://doi.org/10.18632/aging.203442" target="_blank">doi:10.18632/aging.203442</a> — 25 citations; cited by WHO &amp; Public Health Agency of Sweden
+                </div>
+            </div>
+
+            <!-- Writing -->
+            <p class="subsection-label">Writing</p>
+            <div class="card-grid single">
+                <div class="proj-card">
+                    <div class="card-tag">Substack</div>
+                    <h4>EngineeringX</h4>
+                    <p>A collaborative Substack with Dr. Ed Boyden and Claire Wang, exploring ideas at the frontier of engineering and biology. <a href="https://engineeringx.substack.com/" target="_blank">engineeringx.substack.com</a></p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- ═══════════════ BIOTECH ═══════════════ -->
+            <h2 class="section-label">Biotech</h2>
+
+            <p class="subsection-label">Current</p>
+            <div class="card-grid single">
+                <div class="proj-card">
+                    <div class="card-tag">Industry</div>
+                    <h4><a href="https://www.cognitotx.com/" target="_blank">Cognito Therapeutics</a></h4>
+                    <p>Working on 40Hz sensory stimulation as a therapeutic approach to Alzheimer's disease.</p>
+                </div>
+            </div>
+
+            <p class="subsection-label">Past internships</p>
+            <div class="card-grid triple">
+                <div class="proj-card">
+                    <div class="card-tag">Past</div>
+                    <h4><a href="https://www.lygenesis.com/" target="_blank">Lygenesis</a></h4>
+                    <p>Biological data analyses and written deliverables.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Past</div>
+                    <h4><a href="https://www.rubedolife.com/" target="_blank">Rubedo Life Sciences</a></h4>
+                    <p>Biological data analyses and website development.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Past</div>
+                    <h4><a href="https://alio.ai/" target="_blank">Alio</a></h4>
+                    <p>Data analysis and written deliverables.</p>
+                </div>
+            </div>
+
+            <p class="subsection-label">Founded</p>
+            <div class="card-grid single">
+                <div class="proj-card">
+                    <div class="card-tag">Startup · 2019</div>
+                    <h4><a href="https://bioteinresearch.ca/" target="_blank">Biotein</a></h4>
+                    <p>Co-founded in April 2019, focused on human aging. Two active tracks:</p>
+                    <p style="margin-top:.6rem"><strong>Biological age test</strong> — a protein-based test tracking concentration changes that accompany aging, to give customers a full health picture.</p>
+                    <p style="margin-top:.4rem"><strong>Brain aging</strong> — designing research proposals toward curing age-related neurodegeneration.</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- ═══════════════ ORGS & COMMUNITY ═══════════════ -->
+            <h2 class="section-label">Orgs &amp; Community</h2>
+
+            <div class="card-grid">
+                <div class="proj-card">
+                    <div class="card-tag">Current</div>
+                    <h4>Contrary — Venture Partner</h4>
+                    <p>Scouting and interviewing founders, organizing events for builders, and supporting the broader Contrary community.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Current</div>
+                    <h4>Aging Initiative</h4>
+                    <p>Catalyzing collaboration in aging research &amp; biotech on campus. Organizing the NOVA conference on brain aging — showcasing leaders in the field.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Current</div>
+                    <h4>Alzheimer's Buddies — Harvard Co-director</h4>
+                    <p>Supporting those currently afflicted through one-on-one buddy pairing and community connection.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Past</div>
+                    <h4>Volunteer Author</h4>
+                    <p>Wrote articles on the latest science and aging for Youth STEM Matters and Lifespan.io. Also taught martial arts to those with special needs at Easterseals.</p>
+                </div>
+            </div>
+
+            <p class="subsection-label">Conferences</p>
+            <div class="card-grid single">
+                <div class="proj-card">
+                    <p>Interviewed Dr. Nir Barzilai at the <strong>World Longevity Forum</strong> in Madrid (2026) · Organized the <strong>Neuroscience of Vitality and Aging Conference</strong> (2026) · Speaking at the <strong>Animal Longevity Summit</strong> (Oct 2026) · Past talks at Fifteen Seconds, RAADFest, and Collision.</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- ═══════════════ OTHER ═══════════════ -->
+            <h2 class="section-label">Other</h2>
+
+            <div class="card-grid">
+                <div class="proj-card">
+                    <div class="card-tag">Sport</div>
+                    <h4>Running</h4>
+                    <p>Completed a half marathon, currently training toward another.</p>
+                </div>
+                <div class="proj-card">
+                    <div class="card-tag">Recreational coding</div>
+                    <h4>Project Euler</h4>
+                    <p>Top 1% globally, 120+ problems solved. Each challenge involves research, mathematical insight, and a fair amount of trial and error.</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- ═══════════════ CV / RESUME ═══════════════ -->
+            <h2 class="section-label">CV / Résumé</h2>
+            <div class="pdf-wrap">
+                <object data="Resume0719PDF.pdf" type="application/pdf" width="100%" height="600px">
+                    <iframe src="Resume0719PDF.pdf" width="100%" height="600px" style="border:none;">
+                        <p>Your browser does not support PDF embedding.
+                           <a href="Resume0719PDF.pdf" target="_blank">Download my résumé</a>
+                        </p>
+                    </iframe>
+                </object>
+            </div>
+
+        </div>
+
         <footer class="footer" id="contact">
             <div class="container">
               <p>Email: kheranina@gmail.com</p>
-                <div class="row wow zoomIn" data-wow-delay="0.4s">
+                <div class="row">
                     <div class="col-md-12 text-center">
-                        <p>&copy;2021 <strong>Nina Khera</strong>. All Rights Reserved</p>
+                        <p>&copy;2022 <strong>Nina Khera</strong>. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
         </footer>
-        <!--====== END FOOTER AREA ======-->
 
-
-        <!--== plugins js ==-->
         <script src="js/plugins.js"></script>
-        
-        <!--== typed js ==-->
         <script src="js/typed.js"></script>
-        
-        <!--== stellar js ==-->
         <script src="js/jquery.stellar.min.js"></script>
-        
-        <!--== counterup js ==-->
         <script src="js/jquery.counterup.min.js"></script>
-        
-        <!--== waypoints js ==-->
         <script src="js/jquery.waypoints.min.js"></script>
-        
-         <!--== wow js ==-->
         <script src="js/wow.min.js"></script>
-        
-         <!--== validator js ==-->
         <script src="js/validator.min.js"></script>
-        
-         <!--== mixitup js ==-->
         <script src="js/jquery.mixitup.js"></script>
-        
-         <!--== contact js ==-->
         <script src="js/contact.js"></script>
-        
-         <!--== main js ==-->
         <script src="js/main.js"></script>
     </body>
 </html>
