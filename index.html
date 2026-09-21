@@ -95,6 +95,27 @@
                 transform-origin: center center;
                 will-change: transform, filter;
             }
+            .photo-strip {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: .75rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .photo-strip .photo-wrap {
+                margin: 0;          /* override the auto centering */
+                max-width: none;    /* let the grid control width */
+            }
+            
+            .photo-strip .photo-wrap img {
+                max-width: 100%;
+                height: 200px;      /* uniform height — adjust to taste */
+                object-fit: cover;  /* crops nicely to fill the box */
+            }
+            
+            @media (max-width: 500px) {
+                .photo-strip { grid-template-columns: 1fr 1fr; }
+            }
 
             /* the vignette overlay */
             .photo-wrap::after {
@@ -273,11 +294,25 @@
         <!--===== END HEADER AREA ======-->
 
         <div class="page-shell">
-
-            <!-- Photo with focus effect -->
             <div class="photo-wrap" tabindex="0" role="img" aria-label="Nina Khera with her family">
                 <img src="IMG_6284 (1).jpg" alt="My Family">
-                <span class="photo-badge">My family and I/span>
+                <span class="photo-badge">my family</span>
+            </div>
+            
+            <!-- Photo strip -->
+            <div class="photo-strip">
+                <div class="photo-wrap" tabindex="0">
+                    <img src="Capture_d_e_cran_2026-09-21_a__9_25_33_AM.png" alt="Monaco">
+                    <span class="photo-badge">Monaco</span>
+                </div>
+                <div class="photo-wrap" tabindex="0">
+                    <img src="sunflower_picture.png" alt="Sunflower">
+                    <span class="photo-badge">✦</span>
+                </div>
+                <div class="photo-wrap" tabindex="0">
+                    <img src="Capture_d_e_cran_2026-09-21_a__9_26_06_AM.png" alt="NOVA Conference">
+                    <span class="photo-badge">NOVA 2026</span>
+                </div>
             </div>
 
             <h2>A bit about me</h2>
